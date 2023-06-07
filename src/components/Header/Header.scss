@@ -1,0 +1,24 @@
+@use "../../sass/util" as *;
+.header {
+  display: flex;
+  align-items: center;
+  padding: var(--p);
+  background: var(--primary-clr);
+  color: var(--light-clr);
+  height: rem(65);
+
+  &_logo {
+    height: 100%;
+    align-items: center;
+  }
+  &_title {
+    margin-left: rem(6);
+    font-size: rem(20);
+  }
+  &_project {
+    color: var(--gray-clr);
+    font-weight: 500;
+    margin-left: auto;
+    font-size: rem(12);
+  }
+}

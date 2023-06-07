@@ -1,0 +1,5 @@
+@use "../util" as *;
+:root {
+  --p: #{rem(20)};
+  --b-r: #{rem(5)};
+}

@@ -1,0 +1,69 @@
+@use "../../sass/util" as *;
+.form {
+  display: grid;
+  grid-template: auto auto, auto auto;
+  gap: rem(17);
+  &_input {
+    border-radius: var(--b-r);
+    border: 1px solid var(--gray-clr);
+    padding: calc(var(--p) / 1.5);
+    font-size: rem(12);
+  }
+  &_btn {
+    grid-column: 1 / span 2;
+    background: var(--primary-clr);
+    color: var(--light-clr);
+    font-weight: 700;
+    padding: var(--p);
+    border: none;
+    border-radius: var(--b-r);
+    font-size: rem(18);
+  }
+  &_image {
+    display: block;
+    max-width: 100%;
+    height: 500px;
+    margin: 0 auto;
+  }
+  @include breakpoint-down("small") {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.main {
+  padding: calc(var(--p) * 2.5) calc(var(--p) * 2);
+}
+.meme {
+  position: relative;
+  &__image {
+    max-width: 100%;
+    border-radius: 3px;
+    display: block;
+    margin: rem(10) auto;
+  }
+
+  &__text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+      -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+      2px 2px 5px #000;
+    &--bottom {
+      bottom: 0;
+    }
+
+    &--top {
+      top: 0;
+    }
+  }
+}
